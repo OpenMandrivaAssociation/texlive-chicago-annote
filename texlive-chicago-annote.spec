@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /biblio/bibtex/contrib/chicago-annote/chicago-annote.bst
+# catalog-date 2009-02-03 15:12:24 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-chicago-annote
 Version:	20090203
 Release:	1
@@ -36,6 +42,7 @@ annote field in place of the original's annotation.
 %files
 %{_texmfdistdir}/bibtex/bst/chicago-annote/chicago-annote.bst
 %doc %{_texmfdistdir}/doc/bibtex/chicago-annote/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -46,3 +53,5 @@ annote field in place of the original's annotation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
