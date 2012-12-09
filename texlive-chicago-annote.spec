@@ -44,3 +44,18 @@ annote field in place of the original's annotation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090203-2
++ Revision: 750158
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090203-1
++ Revision: 718054
+- texlive-chicago-annote
+- texlive-chicago-annote
+- texlive-chicago-annote
+- texlive-chicago-annote
+- texlive-chicago-annote
+
