@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-chicago-annote
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Chicago-based annotated BibTeX style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/chicago-annote/chicago-annote.bst
