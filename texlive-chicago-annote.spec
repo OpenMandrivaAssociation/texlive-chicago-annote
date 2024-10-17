@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Chicago-based annotated BibTeX style
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/chicago-annote/chicago-annote.bst
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/chicago-annote/chicago-annote.bst
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chicago-annote.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chicago-annote.doc.r%{version}.tar.xz
