@@ -1,6 +1,6 @@
 Name:		texlive-chicago-annote
-Version:	15878
-Release:	2
+Version:	76790
+Release:	1
 Summary:	Chicago-based annotated BibTeX style
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/chicago-annote/chicago-annote.bst
