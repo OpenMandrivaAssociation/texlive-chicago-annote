@@ -1,40 +1,22 @@
-Name:		texlive-chicago-annote
-Version:	76790
+%global tl_name chicago-annote
+%global tl_revision 76790
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
 Release:	1
 Summary:	Chicago-based annotated BibTeX style
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/chicago-annote/chicago-annote.bst
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chicago-annote.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chicago-annote.doc.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/chicago-annote
+License:	lppl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chicago-annote.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chicago-annote.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This is a revision of chicagoa.bst, using the commonly-used
-annote field in place of the original's annotation.
+This is a revision of chicagoa.bst, using the commonly-used annote field
+in place of the original's annotation.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/bibtex/bst/chicago-annote/chicago-annote.bst
-%doc %{_texmfdistdir}/doc/bibtex/chicago-annote/README
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
